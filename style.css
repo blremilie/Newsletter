@@ -1,0 +1,239 @@
+/*Début définition des polices*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,7;0,700;0,900;1,100;1,300;1,400;1,7;1,700;1,900&display=swap');
+/*Fin définition des polices*/
+
+/*Début style de base*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font-size: calc(16px + 0.390625vw);
+}
+
+html {
+    height: 100%; 
+    width: 100%; 
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color:#242742 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+h1{
+    font-size: calc(60px + 0.390625vw); /*responsive font-size*/
+    font-family: Roboto;
+    font-weight: 700;
+    color:#242742;
+}
+
+p{
+    font-family: Roboto;
+    font-weight: 400;
+    color:#242742;
+    line-height: 150%;
+}
+
+ul {
+    font-family: Roboto;
+    font-weight: 400;
+    color:#242742;
+    list-style: none;
+}
+
+form {
+    font-family: Roboto;
+    font-weight: 400;
+    color: #242742;
+}
+
+input {
+    font-weight: 400;
+    color: grey;
+}
+
+button{
+    font-weight: 400;
+    background:#242742;
+    color: white;
+}
+/*Fin style de base*/
+
+/*Début Style newsletter*/
+
+#newsletter {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: auto;
+    border-radius:30px;
+    padding:3%;
+    column-gap: 5%;
+}
+/*Fin Style newsletter*/
+
+/*Début Style informations*/
+
+#informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2.5;
+    
+}
+/*Fin Style informations*/
+
+/*Début Style de la liste*/
+
+li {
+    background: url("./assets/images/icon-list.svg") left no-repeat;
+    padding-left: 30px;
+    margin-left: auto;
+}
+/*Fin Style de la liste*/
+
+/*Début Style image*/
+
+#image {
+   background: url(./assets/images/illustration-sign-up-desktop.svg);
+   width: 400px;
+   height: 593px;
+}
+/*Fin Style image*/
+
+/*Début Style formulaire*/
+
+input, label, #error {
+    display: block;
+}
+
+#email_status {
+    display: flex;
+    column-gap: 40%;
+}
+
+label[for=email] {
+    text-align: justify;
+}
+
+input[type=email] {
+    border: solid 0.1em;
+    border-radius: 10px;
+    border-color:#DCDCDC ;
+    font-weight: 400;
+    color:#242742;
+    padding: 20px;
+    width: 500px;
+}
+
+input[type=submit] {
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    background:#242742;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 500px;
+    margin-top:25px;
+} 
+
+input[type=submit]:hover {
+    background-color: tomato;
+    background-image: linear-gradient(135deg, #e44c68, #ff5476, tomato);
+    transition: background-color;
+}   
+
+/*Fin Style formulaire*/
+
+/*Début Style error_message*/
+
+#error {
+    visibility: hidden;
+    color:red;
+    font-size: calc(10px + 0.390625vw);
+    align-self: center;
+}
+
+/*Fin Style error_message*/
+
+/*Début Style success_message*/
+
+#success_message {
+    background-color: white;
+    display: none;
+    justify-content: space-around;
+    align-items:flex-start;
+    height:min-content;
+    width:min-content;
+    border-radius:30px;
+    padding:3%;
+    font-family: Roboto;
+    flex-wrap: wrap;
+}
+
+span {
+    font-weight: 700;
+}
+
+input[type=submit]:hover {
+    background-color: tomato;
+    background-image: linear-gradient(135deg, #e44c68, #ff5476, tomato);
+    transition: background-color;
+}
+/*Fin Style sucess_message*/
+
+/*Début définition de la responsive*/
+@media all and (min-width: 375px) and (max-width: 1440px) {
+    #image {
+        background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+        background-position:top;
+        background-size:auto;
+        border-radius: 10%;
+        height: 200%;
+        width: 200%;
+       background-repeat: no-repeat;
+    }
+    #newsletter {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    #informations {
+        width: 100%;
+        height: 100%;
+    }
+    p{
+        line-height: 150%;
+        margin:10px 50px 20 px 0;
+    }
+    ul {
+        line-height: 150%;
+        float: left;
+    }
+    #informations h1 {
+        font-size: 35px;
+    }
+    #email{
+        max-width: 350px;
+    }
+    #button{
+        max-width: 350px;;
+    }
+    #success_message {
+        max-width: 375px;
+        border-radius: 0%;
+        height: 100%;
+    }
+}
+/*Fin définition de la responsive*/
